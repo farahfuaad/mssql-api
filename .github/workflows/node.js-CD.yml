@@ -39,6 +39,6 @@ jobs:
         script: |
           pm2 delete all
           cd /home/dev/mssql-api
-          git pull https://${{secrets.GIT_USERNAME}}:${{secrets.GIT_PAT}}@github.com/cikgu-enovade/mssql-api.git
+          git pull https://${{secrets.GIT_USERNAME}}:${{secrets.GIT_PAT}}@github.com/farahfuaad/mssql-api.git
           npm install
           pm2 start index.js
