@@ -1,0 +1,18 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlserver"
+  url      = env("DATABASE_URL")
+}
+
+model Pengguna {
+  IDPengguna Int     @id(map: "PK__Pengguna__2F964D451136EEBF")
+  Nama       String  @db.VarChar(25)
+  Alamat     String? @db.VarChar(Max)
+  Emel       String? @db.VarChar(Max)
+}
